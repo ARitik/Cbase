@@ -1,0 +1,26 @@
+input[100],temp[50],rem[50],quot[50],key[50],key1[50]
+msglen,keylen
+strcpy(key1,key)
+strcpy(temp,input)
+input + keylen-1*0
+
+for(i=0;i<msglen;i++) {
+    quot[i]=rem[0];
+    if(quot[i]==0)
+        for(int j=0;j<keylen;j++)
+            key[j]='0';
+    else
+        for(int j=0;j<keylen;j++)
+            key[j]=key1[j];
+    
+    for(j=keylen-1;j>0;j--) {
+        if(temp[j]==key[j])
+            rem[j-1] = '0'
+        else
+            rem[j-1] = '1'
+    }
+    rem[keylen-1] = temp[i+keylen]
+    strcpy(temp,rem);
+}
+
+strcpy(rem,temp)
