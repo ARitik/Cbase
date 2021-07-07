@@ -1,0 +1,112 @@
+1.print "hi, how are u\n";
+
+2.$test = 6;
+$_test = 5;
+print ("i m a valid \ $test : $test\n");
+print ("i m a valid \$_test : $_test\n");
+
+3.print "Enter a number\n";  
+chomp($a=<stdin>); 
+print "Enter second number\n";
+chomp($b=<stdin>); 
+print "Enter third number\n";
+chomp($c=<stdin>);        
+$big=0; 
+$equal=0;                                                                               
+if($a eq $b){
+$big = $a;
+$equal = 1;
+}       
+elsif($a > $b){
+$big=$a;
+}       
+else{   
+$big = $b;
+}       
+if ($big < $c) {
+$big = $c;
+}       
+if ($big != $c) {
+$equal = 0;
+}       
+if($equal == 1){
+print "All numbers are same";
+}       
+else{   
+print "The biggest number is $big \n";
+}
+
+4.use strict;
+use warnings;
+table(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+sub table {
+foreach my $loop (@_) 
+{
+print $_*$loop, ' ' for 1 .. 10;
+print "\n";
+}
+ 
+}
+
+5.
+use warnings;
+use strict;
+my @fruits = qw(apple orange mango);
+print("@fruits" ,"\n");
+
+6.use warnings;
+use strict;
+my @stack = ();
+print("push1 array\n");
+push(@stack,1);
+@stack = ();
+print("push2 array\n");
+push(@stack,2);
+@stack = ();
+print("push3 array\n");
+push(@stack,3); 
+print("@stack","\n");
+my @elem = pop(@stack);
+print("element1 : @elem\n");
+my $elem = pop(@stack);
+print("element: @elem\n");
+
+7.use warnings;
+use strict;
+my $string = "Tea is good with milk.";
+substr($string, 4, 2) = "might be";
+print $string;
+
+8.@queue  = ();
+print("enqueue 1 \n");
+unshift(@queue,1);
+print("enqueue 2 \n");
+unshift(@queue,2);
+print("enqueue 3 \n");
+unshift(@queue,3);
+print("@queue", "\n");
+my $element = push(@queue);
+print("element: $element\n");
+my $element = pop(@queue);
+print("element: $element\n");
+
+9.use warnings;
+use strict;
+my @fruits = qw(orange mango banana);
+my @sorted = sort@fruits;
+print("@sorted","\n");
+
+10.print((1,2,3,4,5)[4]);
+print("\n");
+
+11.print((1 .. 50));
+
+12.@a = qw(3 2 1 4 6 5);
+print("unsorted", "@","\n");
+
+13.@ = sort {$a <=> $b} $a;
+print("sorted","@a","\n");
+
+
+
+
