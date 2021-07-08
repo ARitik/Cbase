@@ -1,0 +1,63 @@
+<html>
+<head>
+<script>
+function v()
+{
+alert("hi");
+var a=f1.t1.value;
+alert(a);
+var cardno = /^(?:3[47][0-9]{13})$/;  //15 digits validation
+
+//var visa cardno = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;   //13 or 16
+
+
+  if(a.match(cardno))
+        {
+      return true;
+        }
+      else
+        {
+        alert("Not a valid credit card number!");
+        return false;
+        }
+		
+		
+		var b=f1.t2.value;
+		var p1=/^[0-9]{3}$/;   //length is 3 digits
+		
+	if(b.match(p1))
+	{
+	return true;
+	}
+	else
+	{
+	alert("invalid cvv number");
+	}
+
+alert("hai");
+}
+</script>
+</head>
+<body>
+<form name="f1" action="cs.html">
+<h1 align="center"> CREDIT CARD VALIDATION </H1>
+<BR>
+<BR>
+
+Total Amount
+<input type="NUMBER" required/> <br>
+select your bank <br>
+
+
+<input type="radio" name="r1">hdfc</input>
+<input type="radio" name="r1">sbi</input>
+<input type="radio" name="r1">ICICI</input> <br>
+Enter credit card number:
+
+<input type="textbox" name="t1"/> <br>
+CVV <input type="textbox" name="t2"/>
+<br>
+<input type="button" value="validate" onclick="v()">
+</form>
+<body>
+</html>

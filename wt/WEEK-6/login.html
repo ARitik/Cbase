@@ -1,0 +1,56 @@
+<html>
+<head><title>login</title>
+
+<script>
+function V()
+{
+
+var fn=f1.t1.value;
+var pass=f1.t2.value;
+
+if(fn=="") 
+{
+            alert( "Please provide user name!" );
+            document.f1.t1.focus() ;
+            return false;
+}
+ if(ln=="")
+ {
+ 
+    alert( "enter your password" );
+            f1.t2.focus() ;
+            return false;
+ }
+
+}
+
+</script>
+
+
+
+</head>
+<body bgcolor="orange">
+<br>
+<br>
+<br>
+<form align="center" name="f1">
+<b> user name/email id: <input type="textbox" name="t1" required>
+<br>
+<br>
+password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="password" name="t2" required>
+<br>
+</b>
+<br>
+<a href="s.html">
+<input type="button" value="Login" onclick="V()"/></a>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<a href="registration.html" target="f3"> 
+<input type="button" value="register"/>
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset"/>
+</form>
+</body>
+ 

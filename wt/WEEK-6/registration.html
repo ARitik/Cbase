@@ -1,0 +1,130 @@
+<html>
+<head><title>hai</title>
+<script>
+function A()
+{
+
+
+
+
+if ( ( f1.r1[0].checked == false ) && ( f1.r1[1].checked == false ) )
+{
+alert ( "Please choose your Gender: Male or Female" );
+return false;
+}
+
+var fn=f1.t1.value;
+var ln=f1.t2.value;
+if(fn=="") 
+{
+            alert( "Please provide your FIRST  name!" );
+            document.f1.t1.focus() ;
+            return false;
+}
+ if(ln=="")
+ {
+ 
+    alert( "Please provide your last  name!" );
+            f1.t2.focus() ;
+            return false;
+ }
+ 
+ var g=document.f1.p1.value;
+ var h=document.f1.p2.value;
+ 
+     
+    
+	
+	if(g=="")
+	{
+	alert("password should not empty");
+	f1.p1.focus() ;
+    return false;
+	}
+	else if(h=="")
+	{
+	alert("re-type password should not empty");
+	f1.p2.focus() ;
+    return false; 
+   }
+   else if(g.length<6)
+   { 
+   alert("password should be at least 6 charecters");
+   document.f1.p1.focus() ;
+            return false;
+   }
+   else if(g!=h)
+   {
+   alert( "Please provide matching password!" );
+            document.f1.p2.focus() ;
+            return false;
+			}
+			
+	
+var x=f1.t3.value;
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+
+var m=/^\d{10}$/;
+if(!(f1.t4.value.match(m)))
+{
+alert("invalid mobile numbers"); 
+document.f1.t4.focus();
+return false;
+}
+else
+{
+alert("validation done successfully...!");
+return true;
+}
+
+
+			
+			
+ 
+  }
+
+
+
+</script>
+
+
+</head>
+<body bgcolor="orange">
+<form name="f1" align="left" action="ab.html">
+
+
+
+
+<center>     <h1> validation of Registration page </h1>
+
+<font color="blue"> online registration form</font>
+<br>
+<b>gender</b>
+<input type="radio" name="r1">male</input>
+<input type="radio" name="r1">female</input>
+<br><br>
+First Name: <input type="textbox" name="t1" placeholder="enter ur 1st name">
+
+<br>
+<br>
+Last name : <input type="textbox" name="t2" placeholder="enter ur last name" required>
+<br>
+<br>
+Enter ur password: <input type="password" name="p1"/> <br><br>
+Re-Type password: <input type="password" name="p2"/> <br><br>
+Email id: <input type="email" name="t3" placeholder="enter ur mail id" required>
+<br><br>
+Mobile no: <input type="textbox" name="t4" required>
+<br><br>
+Address:<br><br>
+<textarea rows="6" cols="10">
+</textarea>
+
+<input type="submit" value="login" onclick="A()"/>
+</form>
+</html>
